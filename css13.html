@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Display Values</title>
+    <style>
+        .block { display: block; background: #a8dadc; }
+        .inline { display: inline; background: #e9c46a; }
+        .inline-block { display: inline-block; width: 140px; padding: 1rem; background: #f4a261; }
+        .flex { display: flex; gap: 1rem; padding: 1rem; background: #e9ecef; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 1rem; }
+        .none { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Display properties</h1>
+    <div class="block">Block</div>
+    <span class="inline">Inline</span>
+    <span class="inline-block">Inline-block</span>
+    <div class="flex"><span>Flex item 1</span><span>Flex item 2</span></div>
+    <div class="grid"><span>Grid item 1</span><span>Grid item 2</span></div>
+    <p class="none">This element uses display: none.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Overflow</title>
+	<style>
+		body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; }
+		.box { width: 220px; height: 90px; padding: 1rem; margin: 1rem; border: 2px solid #264653; display: inline-block; vertical-align: top; }
+		.all { overflow: auto; }
+		.horizontal { overflow-x: scroll; overflow-y: hidden; white-space: nowrap; }
+		.vertical { overflow-y: scroll; overflow-x: hidden; }
+	</style>
+</head>
+<body>
+	<h1>Overflow properties</h1>
+	<div class="box all">overflow: auto adds scrollbars only when content needs them.</div>
+	<div class="box horizontal">This long line demonstrates overflow-x scrolling.</div>
+	<div class="box vertical">This content demonstrates overflow-y scrolling with several lines of text inside a small box.</div>
+</body>
+</html>

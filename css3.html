@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relationship Selectors</title>
+    <style>
+        article p { color: #457b9d; }
+        article > h2 { color: #1d3557; }
+        h2 + p { font-weight: bold; }
+        h2 ~ p { margin-left: 1rem; }
+        article { max-width: 600px; margin: 2rem auto; padding: 1rem; border: 1px solid #a8dadc; }
+    </style>
+</head>
+<body>
+    <article>
+        <h2>Selector relationships</h2>
+        <p>Adjacent sibling styling applies to this first paragraph.</p>
+        <div><p>This paragraph is a descendant but not a direct child.</p></div>
+        <p>General sibling styling also applies here.</p>
+    </article>
+</body>
+</html>
