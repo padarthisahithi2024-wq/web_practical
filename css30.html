@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Filters</title>
+	<style>
+		body { font-family: sans-serif; }
+		.gallery { display: flex; flex-wrap: wrap; gap: 1rem; }
+		figure { margin: 0; width: 180px; }
+		img { width: 100%; height: 120px; object-fit: cover; }
+		.blur { filter: blur(3px); }
+		.gray { filter: grayscale(1); }
+		.bright { filter: brightness(1.5); }
+		.contrast { filter: contrast(1.8); }
+		.fade { filter: opacity(.4); }
+	</style>
+</head>
+<body>
+	<h1>Image filters</h1>
+	<div class="gallery">
+		<figure><img class="blur" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Blur filter"><figcaption>Blur</figcaption></figure>
+		<figure><img class="gray" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Grayscale filter"><figcaption>Grayscale</figcaption></figure>
+		<figure><img class="bright" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Brightness filter"><figcaption>Brightness</figcaption></figure>
+		<figure><img class="contrast" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Contrast filter"><figcaption>Contrast</figcaption></figure>
+		<figure><img class="fade" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Opacity filter"><figcaption>Opacity</figcaption></figure>
+	</div>
+</body>
+</html>

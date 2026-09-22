@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Object Fit</title>
+	<style>
+		.gallery { display: flex; gap: 1rem; }
+		img { width: 240px; height: 160px; border: 3px solid #264653; }
+		.cover { object-fit: cover; object-position: center; }
+		.contain { object-fit: contain; object-position: top right; background: #e9ecef; }
+	</style>
+</head>
+<body>
+	<h1>Object fitting and positioning</h1>
+	<div class="gallery">
+		<img class="cover" src="https://images.unsplash.com/photo-150752542640?auto=format&fit=crop&w=600&q=80" alt="Ocean view cropped to fit">
+		<img class="contain" src="https://images.unsplash.com/photo-150752542640?auto=format&fit=crop&w=600&q=80" alt="Ocean view contained in its box">
+	</div>
+</body>
+</html>

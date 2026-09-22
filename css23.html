@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Float and Clear</title>
+	<style>
+		body { max-width: 700px; margin: 2rem auto; font-family: sans-serif; }
+		.photo { float: left; width: 140px; height: 100px; margin: 0 1rem 1rem 0; background: #a8dadc; }
+		.clear { clear: both; padding: 1rem; background: #f1faee; }
+	</style>
+</head>
+<body>
+	<h1>Float and clear</h1>
+	<div class="photo"></div>
+	<p>Text flows around the floated box. Float was once a common layout technique.</p>
+	<p class="clear">This paragraph clears the float and starts below it.</p>
+</body>
+</html>

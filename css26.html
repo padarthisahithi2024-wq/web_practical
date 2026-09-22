@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Spacing Utilities</title>
+	<style>
+		body { font-family: sans-serif; }
+		.stack > * { margin: 1rem 0; }
+		.p-2 { padding: 2rem; }
+		.m-auto { max-width: 500px; margin: 2rem auto; }
+		.gap { display: flex; gap: 1rem; }
+		.box { background: #a8dadc; }
+	</style>
+</head>
+<body class="stack">
+	<h1>Margin, padding, and spacing</h1>
+	<section class="box p-2 m-auto">Utility-like classes add consistent spacing.</section>
+	<div class="gap"><div class="box p-2">One</div><div class="box p-2">Two</div></div>
+</body>
+</html>

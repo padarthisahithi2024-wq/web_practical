@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Cascade</title>
+	<style>
+		body { color: #264653; font-family: sans-serif; }
+		.message { color: #2a9d8f; }
+		p.message { color: #e76f51; }
+		#priority { color: #1d3557; }
+		article { color: #6c757d; }
+	</style>
+</head>
+<body>
+	<article>
+		<p class="message">Specificity selects this paragraph color over inherited article color.</p>
+		<p id="priority" class="message">The ID selector wins in the cascade.</p>
+	</article>
+</body>
+</html>

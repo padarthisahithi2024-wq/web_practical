@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Math Functions</title>
+	<style>
+		body { font-family: sans-serif; margin: 0; }
+		.calc { width: calc(100% - 4rem); margin: 1rem 2rem; }
+		.min { width: min(90%, 620px); }
+		.max { width: max(260px, 40%); }
+		.clamp { font-size: clamp(1.2rem, 4vw, 3rem); }
+		.box { padding: 1rem; background: #a8dadc; }
+	</style>
+</head>
+<body>
+	<h1 class="clamp">CSS math functions</h1>
+	<div class="box calc">Width uses calc(100% - 4rem).</div>
+	<div class="box min">Width uses min(90%, 620px).</div>
+	<div class="box max">Width uses max(260px, 40%).</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Keyframes</title>
+	<style>
+		.ball { width: 70px; height: 70px; border-radius: 50%; background: #e76f51; animation: bounce 2s infinite alternate ease-in-out; }
+		@keyframes bounce {
+			from { transform: translateX(0) rotate(0); }
+			to { transform: translateX(300px) rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<h1>Keyframe animation</h1>
+	<div class="ball" aria-label="Animated ball"></div>
+</body>
+</html>

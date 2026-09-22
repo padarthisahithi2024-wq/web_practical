@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Outline</title>
+	<style>
+		body { font-family: sans-serif; padding: 2rem; }
+		.field { padding: 1rem; border: 2px solid #264653; outline: 4px solid #e9c46a; outline-offset: 8px; max-width: 400px; }
+		button:focus { outline: 3px dashed #e76f51; outline-offset: 4px; }
+	</style>
+</head>
+<body>
+	<h1>Outline and offset</h1>
+	<p class="field">An outline is drawn outside the border and does not change layout size.</p>
+	<button>Focus this button</button>
+</body>
+</html>

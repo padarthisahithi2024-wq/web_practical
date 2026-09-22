@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Positioning</title>
+	<style>
+		body { font-family: sans-serif; min-height: 120vh; margin: 0; padding: 1rem; }
+		.static { position: static; background: #e9c46a; padding: .75rem; }
+		.relative { position: relative; left: 20px; background: #a8dadc; padding: .75rem; }
+		.stage { position: relative; height: 180px; background: #f1faee; margin: 1rem 0; }
+		.absolute { position: absolute; right: 1rem; bottom: 1rem; background: #e76f51; padding: .75rem; }
+		.fixed { position: fixed; right: 1rem; bottom: 1rem; background: #264653; color: white; padding: .75rem; }
+		.sticky { position: sticky; top: 0; background: #2a9d8f; color: white; padding: .75rem; }
+	</style>
+</head>
+<body>
+	<div class="static">Static position</div>
+	<div class="relative">Relative position</div>
+	<div class="sticky">Sticky position: scroll to observe it.</div>
+	<div class="stage"><div class="absolute">Absolute inside stage</div></div>
+	<div class="fixed">Fixed to viewport</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Variables</title>
+	<style>
+		:root { --ink: #264653; --accent: #e76f51; --space: 1rem; }
+		body { font-family: sans-serif; color: var(--ink); margin: var(--space); }
+		.panel { padding: calc(var(--space) * 2); border: 3px solid var(--accent); }
+		.button { background: var(--accent); color: white; padding: var(--space); border: 0; }
+	</style>
+</head>
+<body>
+	<section class="panel">
+		<h1>Custom properties</h1>
+		<p>Colors and spacing are reused through CSS variables.</p>
+		<button class="button">Use variable colors</button>
+	</section>
+</body>
+</html>

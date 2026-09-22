@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS 3D Transforms</title>
+	<style>
+		body { font-family: sans-serif; perspective: 700px; }
+		.scene { width: 180px; height: 180px; margin: 3rem; }
+		.cube { height: 100%; padding: 2rem; background: #e76f51; transform: rotateX(35deg) rotateY(35deg); transform-style: preserve-3d; transition: transform .5s; }
+		.cube:hover { transform: rotateX(180deg) rotateY(180deg); }
+	</style>
+</head>
+<body>
+	<h1>3D perspective transform</h1>
+	<div class="scene"><div class="cube">Hover to rotate in 3D</div></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Stacking Order</title>
+	<style>
+		.stage { position: relative; height: 220px; }
+		.layer { position: absolute; width: 180px; height: 120px; padding: 1rem; }
+		.one { left: 1rem; top: 1rem; background: #a8dadc; z-index: 1; }
+		.two { left: 5rem; top: 4rem; background: #e9c46a; z-index: 2; }
+		.three { left: 9rem; top: 7rem; background: #e76f51; z-index: 3; }
+	</style>
+</head>
+<body>
+	<h1>z-index and stacking order</h1>
+	<div class="stage">
+		<div class="layer one">Layer 1</div>
+		<div class="layer two">Layer 2</div>
+		<div class="layer three">Layer 3</div>
+	</div>
+</body>
+</html>
