@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Technology Practical</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7ff;
+            color: #1e293b;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            min-height: 330px;
+            background: linear-gradient(135deg, #111827, #312e81, #7c3aed);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .hero .small-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 14px;
+            color: #c4b5fd;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e0e7ff;
+            line-height: 1.6;
+        }
+
+        /* ================= SEARCH ================= */
+
+        .search-area {
+            width: 90%;
+            max-width: 850px;
+            margin: -30px auto 40px;
+            position: relative;
+        }
+
+        #searchBox {
+            width: 100%;
+            padding: 20px 25px;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            width: 92%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .html-icon {
+            background: #f97316;
+        }
+
+        .css-icon {
+            background: #2563eb;
+        }
+
+        .js-icon {
+            background: #eab308;
+            color: #111827;
+        }
+
+        .category-title h2 {
+            font-size: 28px;
+        }
+
+        .count {
+            background: #e2e8f0;
+            color: #475569;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* ================= PROGRAM GRID ================= */
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 14px;
+        }
+
+        .program {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #1e293b;
+            background: white;
+            padding: 17px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .program:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .program-number {
+            min-width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .html-number {
+            background: #f97316;
+        }
+
+        .css-number {
+            background: #2563eb;
+        }
+
+        .js-number {
+            background: #eab308;
+            color: #111827;
+        }
+
+        .program-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ================= NO RESULTS ================= */
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 60px;
+            background: #111827;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .category-header {
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .category-title h2 {
+                font-size: 22px;
+            }
+
+            .count {
+                font-size: 12px;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HERO ================= -->
+
+    <header>
+
+        <div class="hero">
+
+            <div class="small-title">
+                Practical Assignment
+            </div>
+
+            <h1>Web Technology</h1>
+
+            <p>
+                HTML, CSS & JavaScript Practical Programs
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search for a program..."
+        >
+
+    </div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HTML ================= -->
+
+        <section class="category">
+
+            <div class="category-header">
+
+                <div class="category-title">
+
+                    <div class="category-icon html-icon">
+                        HTML
+                    </div>
+
+                    <h2>HTML Programs</h2>
+
+                </div>
+
+                <div class="count">
+                    15 Programs
+                </div>
+
+            </div>
+
+
+            <div class="program-grid" id="htmlPrograms"></div>
+
+        </section>
+
+
+
+        <!-- ================= CSS ================= -->
+
+        <section class="category">
+
+            <div class="category-header">
+
+                <div class="category-title">
+
+                    <div class="category-icon css-icon">
+                        CSS
+                    </div>
+
+                    <h2>CSS Programs</h2>
+
+                </div>
+
+                <div class="count">
+                    270 Programs
+                </div>
+
+            </div>
+
+
+            <div class="program-grid" id="cssPrograms"></div>
+
+        </section>
+
+
+
+        <!-- ================= JAVASCRIPT ================= -->
+
+        <section class="category">
+
+            <div class="category-header">
+
+                <div class="category-title">
+
+                    <div class="category-icon js-icon">
+                        JS
+                    </div>
+
+                    <h2>JavaScript Programs</h2>
+
+                </div>
+
+                <div class="count">
+                    214 Programs
+                </div>
+
+            </div>
+
+
+            <div class="program-grid" id="jsPrograms"></div>
+
+        </section>
+
+
+        <div class="no-results" id="noResults">
+            No programs found.
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Web Technology Practical</h3>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+
+    <script>
+
+        /* ==================================================
+           HTML PROGRAMS
+        ================================================== */
+
+        const htmlPrograms = [
+            "Basic HTML Webpage",
+            "HTML Lists",
+            "HTML Tables",
+            "Images and Hyperlinks",
+            "Student Registration Form",
+            "Audio and Video",
+            "Frames and Iframes",
+            "Semantic HTML Elements",
+            "HTML5 Input Types",
+            "College Timetable",
+            "Internal and External CSS",
+            "CSS Selectors, Colors, Fonts, Margins, Padding and Borders",
+            "Responsive Webpage using Media Queries",
+            "Bootstrap Components",
+            "Personal Portfolio"
+        ];
+
+
+        const htmlContainer =
+            document.getElementById("htmlPrograms");
+
+
+        htmlPrograms.forEach((program, index) => {
+
+            const number = index + 1;
+
+            const link = document.createElement("a");
+
+            link.href = `html/html${number}.html`;
+
+            link.className = "program";
+
+            link.innerHTML = `
+                <span class="program-number html-number">
+                    ${number}
+                </span>
+
+                <span class="program-name">
+                    ${program}
+                </span>
+            `;
+
+            htmlContainer.appendChild(link);
+
+        });
+
+
+
+        /* ==================================================
+           CSS PROGRAMS
+        ================================================== */
+
+        const cssContainer =
+            document.getElementById("cssPrograms");
+
+
+        for (let i = 1; i <= 270; i++) {
+
+            const link = document.createElement("a");
+
+            link.href = `css/css${i}.html`;
+
+            link.className = "program";
+
+            link.innerHTML = `
+                <span class="program-number css-number">
+                    ${i}
+                </span>
+
+                <span class="program-name">
+                    CSS Program ${i}
+                </span>
+            `;
+
+            cssContainer.appendChild(link);
+
+        }
+
+
+
+        /* ==================================================
+           JAVASCRIPT PROGRAMS
+        ================================================== */
+
+        const jsContainer =
+            document.getElementById("jsPrograms");
+
+
+        for (let i = 1; i <= 214; i++) {
+
+            const link = document.createElement("a");
+
+            link.href = `javascript/js${i}.html`;
+
+            link.className = "program";
+
+            link.innerHTML = `
+                <span class="program-number js-number">
+                    ${i}
+                </span>
+
+                <span class="program-name">
+                    JavaScript Program ${i}
+                </span>
+            `;
+
+            jsContainer.appendChild(link);
+
+        }
+
+
+
+        /* ==================================================
+           SEARCH
+        ================================================== */
+
+        const searchBox =
+            document.getElementById("searchBox");
+
+        const noResults =
+            document.getElementById("noResults");
+
+
+        searchBox.addEventListener("input", function () {
+
+            const searchText =
+                this.value.toLowerCase().trim();
+
+            const programs =
+                document.querySelectorAll(".program");
+
+            let visiblePrograms = 0;
+
+
+            programs.forEach(program => {
+
+                const text =
+                    program.textContent.toLowerCase();
+
+                if (text.includes(searchText)) {
+
+                    program.style.display = "flex";
+
+                    visiblePrograms++;
+
+                } else {
+
+                    program.style.display = "none";
+
+                }
+
+            });
+
+
+            if (visiblePrograms === 0) {
+
+                noResults.style.display = "block";
+
+            } else {
+
+                noResults.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

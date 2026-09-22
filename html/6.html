@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Media Library</title>
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			max-width: 850px;
+			margin: 2rem auto;
+			padding: 0 1rem;
+			background: #f8f4ef;
+		}
+
+		section {
+			background: white;
+			padding: 1.25rem;
+			margin: 1rem 0;
+			border-left: 5px solid #e76f51;
+		}
+
+		audio,
+		video {
+			max-width: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Media Library</h1>
+	<section>
+		<h2>Audio sample</h2>
+		<audio controls>
+			<source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+			Your browser does not support audio.
+		</audio>
+	</section>
+	<section>
+		<h2>Video sample</h2>
+		<video controls>
+			<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+			Your browser does not support video.
+		</video>
+	</section>
+</body>
+</html>
